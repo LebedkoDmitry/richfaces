@@ -61,7 +61,6 @@
         <version.wildfly81>8.1.0.Final</version.wildfly81>
         <version.wildfly82>8.2.0.Final</version.wildfly82>
         <version.tomee17>1.7.0</version.tomee17>
-        <version.glassfish40>4.0</version.glassfish40>
         <version.tomcat6>6.0.36</version.tomcat6>
         <version.tomcat7>7.0.57</version.tomcat7>
         <version.tomcat8>8.0.21</version.tomcat8>
@@ -1425,48 +1424,6 @@
                 <dependency>
                     <groupId>org.apache.openejb</groupId>
                     <artifactId>arquillian-tomee-remote</artifactId>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>glassfish-managed-4-0</id>
-            <activation>
-                <property>
-                    <name>integration</name>
-                    <value>glassfish40</value>
-                </property>
-            </activation>
-            <properties>
-                <arquillian.launch.glassfish40>true</arquillian.launch.glassfish40>
-                <arquillian.container.home>${project.build.directory}/glassfish4</arquillian.container.home>
-                <arquillian.container.distribution>org.glassfish.main.distributions:glassfish:zip:${version.glassfish40}</arquillian.container.distribution>
-                <testCategory.excluded.jsf>AND NOT category.JSF22Only</testCategory.excluded.jsf>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-glassfish-managed-3.1</artifactId>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-        </profile>
-        <profile>
-            <id>glassfish-remote-4-0</id>
-            <activation>
-                <property>
-                    <name>integration</name>
-                    <value>glassfish40-remote</value>
-                </property>
-            </activation>
-            <properties>
-                <arquillian.launch.glassfish40>true</arquillian.launch.glassfish40>
-                <testCategory.excluded.jsf>AND NOT category.JSF22Only</testCategory.excluded.jsf>
-            </properties>
-            <dependencies>
-                <dependency>
-                    <groupId>org.jboss.arquillian.container</groupId>
-                    <artifactId>arquillian-glassfish-remote-3.1</artifactId>
                     <scope>test</scope>
                 </dependency>
             </dependencies>
