@@ -125,7 +125,7 @@
         <version.wildfly81>8.1.0.Final</version.wildfly81>
         <version.wildfly82>8.2.0.Final</version.wildfly82>
         <version.tomee17>1.7.1</version.tomee17>
-        <version.glassfish40>4.0</version.glassfish40>
+        <version.glassfish41>4.1</version.glassfish41>
         <version.tomcat6>6.0.36</version.tomcat6>
         <version.tomcat7>7.0.57</version.tomcat7>
         <version.tomcat8>8.0.21</version.tomcat8>
@@ -1017,18 +1017,17 @@
             </dependencies>
         </profile>
         <profile>
-            <id>glassfish-managed-4-0</id>
+            <id>glassfish-managed-4-1</id>
             <activation>
                 <property>
                     <name>integration</name>
-                    <value>glassfish40</value>
+                    <value>glassfish41</value>
                 </property>
             </activation>
             <properties>
-                <arquillian.launch.glassfish40>true</arquillian.launch.glassfish40>
+                <arquillian.launch.glassfish41>true</arquillian.launch.glassfish41>
                 <arquillian.container.home>${project.build.directory}/glassfish4</arquillian.container.home>
-                <arquillian.container.distribution>org.glassfish.main.distributions:glassfish:zip:${version.glassfish40}</arquillian.container.distribution>
-                <testCategory.excluded.jsf>AND NOT category.JSF22Only</testCategory.excluded.jsf>
+                <arquillian.container.distribution>org.glassfish.main.distributions:glassfish:zip:${version.glassfish41}</arquillian.container.distribution>
             </properties>
             <dependencies>
                 <dependency>
@@ -1039,7 +1038,7 @@
             </dependencies>
         </profile>
         <profile>
-            <id>glassfish-remote-4-0</id>
+            <id>glassfish-remote-4-1</id>
             <activation>
                 <property>
                     <name>integration</name>
