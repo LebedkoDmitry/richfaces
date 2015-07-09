@@ -63,7 +63,6 @@
         <version.wildfly82>8.2.0.Final</version.wildfly82>
         <version.jboss-as7>7.1.1.Final</version.jboss-as7>
         <version.tomee17>1.7.0</version.tomee17>
-        <version.glassfish40>3.1.2.2</version.glassfish40>
 
         <maven.min.version>3.0</maven.min.version>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -587,7 +586,6 @@
                 <arquillian.launch.wildfly82>false</arquillian.launch.wildfly82>
                 <arquillian.launch.jbossas71>false</arquillian.launch.jbossas71>
                 <arquillian.launch.tomee17>false</arquillian.launch.tomee17>
-                <arquillian.launch.glassfish40>false</arquillian.launch.glassfish40>
                 
                 <!-- JUnit Categories Selection -->
                 <testCategory.excluded.container />
